@@ -19,9 +19,12 @@ public class SimpleHTTPServer {
     // wait for connection
     // then send the corresponding socket to an instance of Handler
     // and let it handle the request
-    Socket socket = nill;
-    ServerSocket serverSocket = null;
+    Socket socket = null;
+    ServerSocket serverSock = null;
 
+    try{
+      serverSock = new 
+    }
     while(true){
         socket = serverSocket.accept();
         Handler handler = new Handler(socket);
