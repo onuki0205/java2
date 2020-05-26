@@ -8,7 +8,7 @@ class ServerEnvClient{
     ServerEnv obj = null;
 
     try {
-      obj = (ServerEnv)Naming.lookup("//localhost:5555" + "/ServerEnv");// //localhost:XXXX
+      obj = (ServerEnv)Naming.lookup("//localhost:5555" + "/ServerEnv");
       message = obj.showServerEnv();
     } catch (Exception e) {
       System.out.println("ServerEnvClient exception: " +
@@ -16,5 +16,5 @@ class ServerEnvClient{
       e.printStackTrace();
     }
     System.out.println("Message = " + message);
-  }
+  } // end of main
 }

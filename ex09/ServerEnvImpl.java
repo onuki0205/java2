@@ -11,15 +11,15 @@ public class ServerEnvImpl extends UnicastRemoteObject implements ServerEnv {
   }
 
   public String showServerEnv(){
-    String os = System.getProperty("os.name");
-    InetAddress inetAddress = null;
+    String OS = System.getProperty("os.name");
+    InetAddress address = null;
     try{
-      inetAddress = InetAddress.getLocalHost();
-      inetAddress.getHostName();
+      address = InetAddress.getLocalHost();
+      address.getHostName();
     }catch(UnknownHostException e){
       e.printStackTrace();
     }
-    return "Server Env: OS of "+inetAddress.getHostName()+" is "+ os;
+    return "Server Env: OS of "+address.getHostName()+" is "+OS;
   }
 
   public static void main(String args[]) {
@@ -37,3 +37,4 @@ public class ServerEnvImpl extends UnicastRemoteObject implements ServerEnv {
     }
   }
 }
+
